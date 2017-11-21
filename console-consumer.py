@@ -11,7 +11,7 @@ def main():
             settings['kafka']['servers'],
             settings['kafka']['topic']
     ):
-        print(f'Received {line}')
+        print(f'Received: {line}')
 
 if __name__ == "__main__":
     main()
