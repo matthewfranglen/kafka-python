@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# pylint: disable=invalid-name
+
 import sys
 
 from lib.kafka import write
@@ -9,7 +12,7 @@ def main():
     write(
         settings['kafka']['servers'],
         settings['kafka']['topic'],
-        sys.stdin
+        (line.rstrip() for line in sys.stdin)
     )
 
 if __name__ == "__main__":
