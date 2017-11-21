@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # pylint: disable=invalid-name
 
-from lib.kafka import read
-from lib.settings import read_settings
+from src.kafka import read
+from src.settings import read_settings
 
 def main():
     settings = read_settings()

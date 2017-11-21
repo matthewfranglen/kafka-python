@@ -3,8 +3,8 @@
 
 import sys
 
-from lib.kafka import write
-from lib.settings import read_settings
+from src.kafka import write
+from src.settings import read_settings
 
 def main():
     settings = read_settings()
