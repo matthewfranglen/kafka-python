@@ -3,8 +3,47 @@ Python and Kafka
 
 This is a demonstration of using python and kafka
 
+Running
+-------
+
+Start this with docker-compose:
+
+```bash
+docker-compose up
+```
+
+Once the docker containers are running you can use the following commands:
+
+### Console Producer
+
+This reads from standard in and writes each line to kafka as a separate message:
+
+```bash
+echo hello | ./console-producer.py
+```
+
+### Console Consumer
+
+This reads from kafka and writes each message to standard out:
+
+```bash
+./console-consumer.py
+```
+
+### Elastic Search Consumer
+
+This reads from kafka and writes each message to elasticsearch:
+
+```bash
+./elasticsearch-consumer.py
+```
+
+You can view the written documents [by searching for them](http://localhost:9200/example/_search?pretty).
+
 Requirements
 ------------
+
+This was written for python 3.6.2.
 
 ### Dependencies
 
